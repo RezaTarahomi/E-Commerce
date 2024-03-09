@@ -1,0 +1,46 @@
+﻿
+<style>
+    #example {
+        zoom: 2;
+        -moz-transform: scale(0.5);
+        -webkit-transform-origin: 0 0;
+    }
+    
+</style>
+
+<div id="example"></div>
+<div id="moreinfo"></div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+@*<script src="~/lib/calendar-heatmap/calendar_yearview_blocks.js"></script>*@
+
+<script src="~/lib/calendar-heatmap/calendar_yearview_blocks - Copy.js"></script>
+<link href="~/lib/calendar-heatmap/calendar_yearview_blocks.css" rel="stylesheet" />
+
+
+<script>
+    const mydata = '{"2023-08-01": { "items": ["orange", "default"] },"2023-08-02": { "items": ["orange"] },"2023-08-03": { "items": ["orange"] },"2023-08-04": { "items": ["orange"] },"2023-08-05": { "items": ["default","orange"] },"2024-07-01": { "items": ["orange"] },"2023-06-03": { "items": ["orange", "apple", "orange"] }}';
+
+   
+
+    $('#example').calendar_yearview_blocks({
+        data: mydata,
+        colors: {
+            'default': '#eeeeee',
+            'apple': 'green',
+            'banana': 'yellow',
+            'orange': 'orange', 
+            'pear': 'lightgreen'
+        },
+        start_monday: true,
+        always_show_tooltip: true,
+        stylize_today: false,
+        final_date: "2024-03-20",
+        month_names: ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذز', 'دی', 'بهمن', 'اسفند'],
+        day_names: ['شنبه', 'دوشنبه', 'چهارشنبه', 'جمعه']
+
+               
+
+    });
+
+</script>
